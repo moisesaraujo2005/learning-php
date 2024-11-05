@@ -114,3 +114,33 @@ array_push($familiares, "Salomao", 8);
 
 var_dump($familiares);
 
+
+
+
+
+
+function calcular(int $numero1, int $numero2, string $operacao): float
+{
+    return match($operacao) {
+        'soma' => $numero1 + $numero2,
+        'subtração' => $numero1 - $numero2,
+        'divisão' => $numero1 / $numero2, 
+        'multiplicação' => $numero1 * $numero2,
+    };
+}
+
+
+
+echo calcular(40, 30, "soma") . "\n";
+
+function calcularImc(float $peso, float $altura) {
+    echo $peso / ($altura * $altura) . "\n";
+}
+
+calcularImc(73.5, 1.80);
+
+function converterGraus (float $temperaturaEmGraus) {
+    echo  $temperaturaEmGraus*1.8+32;
+}
+
+echo converterGraus(30);
