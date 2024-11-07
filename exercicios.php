@@ -143,4 +143,35 @@ function converterGraus (float $temperaturaEmGraus) {
     echo  $temperaturaEmGraus*1.8+32;
 }
 
-echo converterGraus(30);
+function ordemAfalbetica (array $frases = []) {
+   sort($frases);
+   var_dump($frases);
+}
+
+ordemAfalbetica(["maçã","banana",  "abacaxi"]);
+
+echo converterGraus(30) . "\n";
+
+
+$notasMaiores = [9, 30, 15, 22, 10];
+
+rsort($notasMaiores);
+
+for ($i=0; $i<3; $i++) {
+    echo $notasMaiores[$i] . "\n";
+}
+
+$nome = "Vinicius Dias,1997,Programador";
+
+
+
+$nomeProgramador = substr($nome, 0, 13);
+$anoProgramador = (int) substr($nome, 14, 4);
+$profissao = substr($nome, 19, 12 );
+$programador = [];
+array_push($programador, $nomeProgramador);
+array_push($programador, $anoProgramador);
+array_push($programador, $profissao);
+
+var_dump($programador);
+
